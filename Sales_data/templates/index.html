@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Transactions – AI Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sales System</h1>
+
+    <form method="POST">
+
+        <!-- AI SEARCH -->
+        <div class="box">
+            <h2>Search</h2>
+            <input type="text" name="ai_query" placeholder="Ask AI...">
+            <button type="submit">Ask AI</button>
+        </div>
+
+        <hr>
+
+        <!-- MANUAL FILTERS -->
+        <div class="box">
+            <h2>Manual Filters</h2>
+
+            <div class="grid">
+                <input type="text" name="customer_id" placeholder="Customer ID">
+
+                <select name="item_name">
+                    <option value="">Select Item</option>
+                    {% for item in items %}
+                        <option value="{{ item.item_name }}">{{ item.item_name }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="transaction_type">
+                    <option value="">Transaction Type</option>
+                    <option value="SALE">SALE</option>
+                    <option value="PURCHASE">PURCHASE</option>
+                </select>
+
+                <input type="date" name="date">
+            </div>
+
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <!-- RESULTS -->
+    {% if data %}
+    <h2 class="result-title">Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Type</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.transaction_id }}</td>
+                <td>{{ row.customer_name }}</td>
+                <td>{{ row.item_name }}</td>
+                <td>{{ row.quantity }}</td>
+                <td>₹{{ row.total_amount }}</td>
+                <td>{{ row.transaction_type }}</td>
+                <td>{{ row.date }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    <!-- SALES SUMMARY -->
+    {% if summary %}
+    <h2 class="result-title">Sales Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Total Quantity</th>
+                <th>Total Sales</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in summary %}
+            <tr>
+                <td>{{ row.item_name }}</td>
+                <td>{{ row.total_quantity }}</td>
+                <td>₹{{ row.total_sales }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+transaction_id,customer_id,customer_name,email,item_id,item_name,price,quantity,total_amount,transaction_type,date
+T001,C001,Alice,alice@mail.com,I01,Pen,10,2,20,SALE,2025-10-02
+T005,C002,Bob,bob@mail.com,I01,Pen,10,3,30,SALE,2025-10-03
+T008,C003,Charlie,charlie@mail.com,I03,Notebook,50,2,100,SALE,2025-10-04
+T011,C004,David,david@mail.com,I07,Marker,25,2,50,SALE,2025-10-05
+T002,C001,Alice,alice@mail.com,I02,Pencil,5,5,25,SALE,2025-10-05
+T014,C005,Eva,eva@mail.com,I09,File,40,1,40,SALE,2025-10-06
+T006,C002,Bob,bob@mail.com,I04,Eraser,3,10,30,SALE,2025-10-06
+T009,C003,Charlie,charlie@mail.com,I05,Sharpener,7,3,21,SALE,2025-10-07
+T019,C007,Grace,grace@mail.com,I13,Chart Paper,25,5,125,PURCHASE,2025-10-08
+T023,C009,Ian,ian@mail.com,I17,Envelope,10,20,200,PURCHASE,2025-10-08
+T003,C001,Alice,alice@mail.com,I03,Notebook,50,1,50,SALE,2025-10-10
+T025,C010,Jack,jack@mail.com,I19,Sticky Notes,35,4,140,PURCHASE,2025-10-10
+T012,C004,David,david@mail.com,I08,Highlighter,30,1,30,SALE,2025-10-11
+T020,C007,Grace,grace@mail.com,I14,Whiteboard Marker,45,2,90,PURCHASE,2025-10-12
+T015,C005,Eva,eva@mail.com,I10,Stapler,120,1,120,SALE,2025-10-14
+T010,C003,Charlie,charlie@mail.com,I06,Scale,15,2,30,SALE,2025-10-15
+
+T016,C006,Frank,frank@mail.com,I11,Paper Clip,20,4,80,PURCHASE,2025-11-02
+T021,C008,Helen,helen@mail.com,I15,Calculator,450,1,450,PURCHASE,2025-11-05
+T017,C006,Frank,frank@mail.com,I12,Glue,35,2,70,PURCHASE,2025-11-09
+T004,C001,Alice,alice@mail.com,I01,Pen,10,4,40,SALE,2025-11-18
+T018,C006,Frank,frank@mail.com,I11,Paper Clip,20,6,120,PURCHASE,2025-11-21
+T007,C002,Bob,bob@mail.com,I01,Pen,10,6,60,SALE,2025-11-20
+T024,C009,Ian,ian@mail.com,I18,Folder,60,3,180,PURCHASE,2025-11-19
+T013,C004,David,david@mail.com,I07,Marker,25,3,75,SALE,2025-11-22
+
+T022,C008,Helen,helen@mail.com,I16,Diary,150,1,150,PURCHASE,2025-12-17
+T026,C010,Jack,jack@mail.com,I19,Sticky Notes,35,6,210,PURCHASE,2025-12-23
+T027,C001,Alice,alice@mail.com,I04,Eraser,3,12,36,SALE,2025-12-23
+T028,C002,Bob,bob@mail.com,I02,Pencil,5,8,40,SALE,2025-12-26
+T029,C003,Charlie,charlie@mail.com,I03,Notebook,50,3,150,SALE,2025-12-27
+T030,C004,David,david@mail.com,I08,Highlighter,30,2,60,SALE,2025-12-28
+T031,C002,Bob,bob@mail.com,I19,Sticky Notes,35,1,35,SALE,2025-12-31
